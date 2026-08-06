@@ -2,54 +2,48 @@
 
 ![EcoLogística Dashboard](assets/github-banner.svg)
 
-> Dashboard de comando centralizado para análise financeira, performance da frota e simulação de cenários operacionais.
+> Dashboard interativo para gestão operacional, análise financeira e visualização de performance da frota em tempo de decisão.
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)
 
-## Visão Geral
+## Visão geral
 
-Este projeto apresenta uma interface interativa e visualmente organizada para acompanhar indicadores-chave de operação logística, incluindo:
+Este projeto apresenta uma interface moderna e funcional para acompanhar indicadores-chave da operação logística, com foco em:
 
-- análise financeira com KPIs e gráficos;
+- análise financeira com KPIs e evolução mensal;
 - ranking de motoristas e performance da frota;
-- simulação de métricas mensais;
-- navegação entre páginas com uma experiência moderna e limpa.
+- simulação de cenários operacionais;
+- navegação entre páginas com experiência visual limpa e profissional.
 
-## Funcionalidades
+## Funcionalidades principais
 
-- 📊 Painel financeiro com indicadores e evolução mensal;
-- 🧭 Navegação por páginas com layout tipo dashboard;
-- 👥 Visualização da frota e do ranking de motoristas;
+- 📊 Painel financeiro com métricas e gráficos comparativos;
+- 🧭 Navegação entre páginas com layout tipo dashboard;
+- 👥 Visualização da frota e ranking de motoristas;
 - 🔄 Simulação de métricas com seleção de parâmetro;
-- 🎨 Interface responsiva e visualmente refinada.
+- 🎨 Interface responsiva, elegante e preparada para apresentação.
 
-## Destaques do projeto
+## Arquitetura e stack
 
-- Visual moderno e organizado para apresentação de dados;
-- Experiência fluida entre páginas e seções;
-- Estrutura preparada para evoluir com mais métricas e recursos.
-
-## Tecnologias
-
-- HTML5
-- CSS3
-- JavaScript ES modules
-- Chart.js
+- HTML5 para estrutura semântica;
+- CSS3 para design visual e responsividade;
+- JavaScript ES modules para organização do código;
+- Chart.js para visualização de dados.
 
 ## Como executar localmente
 
 1. Abra a pasta do projeto no VS Code.
 2. Execute o arquivo [index.html](index.html) em um navegador.
-3. Ou use um servidor simples, como:
+3. Ou use um servidor simples:
 
 ```bash
 python -m http.server 8000
 ```
 
-Em seguida, acesse http://localhost:8000.
+Depois, acesse http://localhost:8000.
 
 ## Estrutura do projeto
 
@@ -59,8 +53,15 @@ Dashboard/
 ├── css/
 ├── js/
 ├── dados/
-└── img/
+├── img/
+└── assets/
 ```
+
+## Melhorias aplicadas
+
+- otimização da experiência visual para apresentação no GitHub;
+- adição de metadados e favicon para uma presença mais profissional;
+- README mais completo e preparado para demonstrar o projeto a recrutadores e clientes.
 
 ## Autor
 
