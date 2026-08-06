@@ -205,7 +205,7 @@ function criarGraficoSimulacao() {
             labels: meses,
             datasets: [{
                 label: currentMetric === 'total_entregas' ? 'Total de Entregas' : 'Faturação Total',
-                data,
+                data: dados,
                 backgroundColor: 'rgba(102, 126, 234, 0.8)',
                 borderColor: '#667eea',
                 borderWidth: 2,
