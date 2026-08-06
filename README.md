@@ -1,5 +1,7 @@
 # EcoLogística S.A. Dashboard
 
+![EcoLogística Dashboard](assets/github-banner.svg)
+
 > Dashboard de comando centralizado para análise financeira, performance da frota e simulação de cenários operacionais.
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -23,6 +25,12 @@ Este projeto apresenta uma interface interativa e visualmente organizada para ac
 - 👥 Visualização da frota e do ranking de motoristas;
 - 🔄 Simulação de métricas com seleção de parâmetro;
 - 🎨 Interface responsiva e visualmente refinada.
+
+## Destaques do projeto
+
+- Visual moderno e organizado para apresentação de dados;
+- Experiência fluida entre páginas e seções;
+- Estrutura preparada para evoluir com mais métricas e recursos.
 
 ## Tecnologias
 
