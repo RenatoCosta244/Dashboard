@@ -154,34 +154,12 @@ function criarGraficoRanking() {
         },
         options: {
             indexAxis: 'y',
-            interaction: {
-                mode: 'nearest',
-                intersect: false
-            },
             plugins: {
                 legend: {
                     display: false
                 },
                 tooltip: {
-                    enabled: false,
-                    external: function(context) {
-                        if (context.tooltip.opacity === 0) {
-                            hideTooltip();
-                            return;
-                        }
-
-                        const dataPoint = context.tooltip.dataPoints && context.tooltip.dataPoints[0];
-                        if (dataPoint) {
-                            updateTooltip(dataPoint, context.tooltip.caretX, context.tooltip.caretY);
-                        }
-                    }
-                }
-            },
-            elements: {
-                bar: {
-                    hoverBackgroundColor: 'rgba(255, 255, 255, 0.9)',
-                    hoverBorderColor: 'rgba(255, 255, 255, 0.8)',
-                    hoverBorderWidth: 0
+                    enabled: true
                 }
             }
         }
