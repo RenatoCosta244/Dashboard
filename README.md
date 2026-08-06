@@ -33,6 +33,14 @@ Este projeto apresenta uma interface moderna e funcional para acompanhar indicad
 - JavaScript ES modules para organização do código;
 - Chart.js para visualização de dados.
 
+## Demo
+
+Veja o projeto em funcionamento online:
+
+- 🌐 [Abrir dashboard em produção](https://renatocosta244.github.io/Dashboard/)
+
+![Preview do dashboard](assets/demo-preview.svg)
+
 ## Como executar localmente
 
 1. Abra a pasta do projeto no VS Code.
