@@ -6,27 +6,30 @@
 }
 
 :root {
-    --primary-color: #2E7D32;
-    --secondary-color: #1976D2;
-    --accent-color: #FF6F00;
-    --success-color: #4CAF50;
-    --danger-color: #F44336;
-    --warning-color: #FF9800;
-    --bg-dark: #1a1a2e;
-    --bg-card: #16213e;
-    --bg-header: #0f3460;
-    --text-primary: #ffffff;
-    --text-secondary: #b0b0b0;
-    --border-color: #2a2a4a;
-    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    --primary-color: #34D399;
+    --secondary-color: #60A5FA;
+    --accent-color: #F59E0B;
+    --success-color: #34D399;
+    --danger-color: #F87171;
+    --warning-color: #FBBF24;
+    --bg-dark: #07131F;
+    --bg-card: rgba(10, 25, 40, 0.88);
+    --bg-header: rgba(7, 19, 31, 0.96);
+    --text-primary: #F8FAFC;
+    --text-secondary: #A7B9C9;
+    --border-color: rgba(255, 255, 255, 0.12);
+    --gradient-1: linear-gradient(135deg, #34D399 0%, #2563EB 100%);
+    --gradient-2: linear-gradient(135deg, #60A5FA 0%, #818CF8 100%);
+    --gradient-3: linear-gradient(135deg, #F59E0B 0%, #FB923C 100%);
+    --gradient-4: linear-gradient(135deg, #2DD4BF 0%, #34D399 100%);
+    --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.28);
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background:
+        radial-gradient(circle at top left, rgba(52, 211, 153, 0.18), transparent 25%),
+        linear-gradient(135deg, #07131F 0%, #10253A 45%, #0F172A 100%);
     min-height: 100vh;
     color: var(--text-primary);
     overflow-x: hidden;
@@ -41,12 +44,12 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    background: rgba(14, 25, 49, 0.9);
+    background: rgba(7, 19, 31, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 999px;
     padding: 10px 14px;
     backdrop-filter: blur(14px);
-    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-soft);
 }
 
 .profile-photo {
@@ -80,7 +83,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background:
+        radial-gradient(circle at top, rgba(52, 211, 153, 0.15), transparent 30%),
+        linear-gradient(135deg, #07131F 0%, #10253A 60%, #0F172A 100%);
     position: relative;
     overflow: hidden;
 }
@@ -158,14 +163,15 @@ body {
 }
 
 .nav-button {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
     padding: 30px 20px;
     cursor: pointer;
     transition: all 0.3s ease;
     color: var(--text-primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .nav-button:hover {
@@ -216,12 +222,13 @@ body {
 }
 
 .dashboard-header {
-    background: var(--bg-header);
+    background: linear-gradient(90deg, rgba(7, 19, 31, 0.98) 0%, rgba(10, 25, 40, 0.96) 100%);
     padding: 20px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -274,12 +281,13 @@ body {
 
 .kpi-card {
     background: var(--bg-card);
-    border-radius: 15px;
+    border-radius: 18px;
     padding: 25px;
     position: relative;
     overflow: hidden;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    box-shadow: var(--shadow-soft);
 }
 
 .kpi-card:hover {
@@ -342,10 +350,11 @@ body {
 /* Cards de Gráficos e Tabelas */
 .chart-card, .table-card, .control-card {
     background: var(--bg-card);
-    border-radius: 15px;
+    border-radius: 18px;
     padding: 25px;
     border: 1px solid var(--border-color);
     overflow: hidden;
+    box-shadow: var(--shadow-soft);
 }
 
 .chart-card h3, .table-card h3, .control-card h3 {
