@@ -154,12 +154,16 @@ function criarGraficoRanking() {
         },
         options: {
             indexAxis: 'y',
+            interaction: {
+                mode: 'nearest',
+                intersect: false
+            },
             plugins: {
                 legend: {
                     display: false
                 },
                 tooltip: {
-                    enabled: true,
+                    enabled: false,
                     external: function(context) {
                         if (context.tooltip.opacity === 0) {
                             hideTooltip();
@@ -171,6 +175,13 @@ function criarGraficoRanking() {
                             updateTooltip(dataPoint, context.tooltip.caretX, context.tooltip.caretY);
                         }
                     }
+                }
+            },
+            elements: {
+                bar: {
+                    hoverBackgroundColor: 'rgba(255, 255, 255, 0.9)',
+                    hoverBorderColor: 'rgba(255, 255, 255, 0.8)',
+                    hoverBorderWidth: 0
                 }
             }
         }
