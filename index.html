@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLogística S.A. - Dashboard de Comando</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="page active">
+        <div id="profile-card">
+            <img src="img/Renato foto.jpg" alt="Renato" class="profile-photo">
+            <div class="profile-info">
+                <span class="profile-name">Renato</span>
+                <span class="profile-role">EcoLogística</span>
+            </div>
+        </div>
+        <div class="landing-container">
+            <div class="landing-content">
+                <div class="logo-section">
+                    <div class="logo-icon">🌿</div>
+                    <h1 class="company-title">EcoLogística S.A.</h1>
+                    <p class="company-subtitle">Dashboard de Comando Centralizado</p>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="nav-menu">
+                    <h2 class="nav-title">Relatório</h2>
+                    <div class="nav-grid">
+                        <button class="nav-button" data-page="analise-financeira">
+                            <span class="nav-icon">📊</span>
+                            <span class="nav-text">Análise Financeira</span>
+                            <span class="nav-desc">KPIs e Métricas Financeiras</span>
+                        </button>
+                        
+                        <button class="nav-button" data-page="produtos-motoristas">
+                            <span class="nav-icon">👥</span>
+                            <span class="nav-text">Produtos e Motoristas</span>
+                            <span class="nav-desc">Ranking e Performance</span>
+                        </button>
+                        
+                        <button class="nav-button" data-page="simulacao">
+                            <span class="nav-icon">🔄</span>
+                            <span class="nav-text">Simulação</span>
+                            <span class="nav-desc">Análise com Parâmetros</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="landing-footer">
+                    <p>Sistema de Monitorização de Frota e Entregas</p>
+                    <p class="version">v1.0.0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Página Análise Financeira -->
+    <div id="analise-financeira" class="page">
+        <div class="dashboard-header">
+            <button class="back-button" data-page="landing-page">← Voltar</button>
+            <h2>Análise Financeira</h2>
+            <div class="header-info">
+                <span class="date-indicator" id="current-date"></span>
+                <span class="refresh-indicator">🔄 Atualizado</span>
+            </div>
+        </div>
+        
+        <div class="dashboard-grid">
+            <!-- KPIs Cards -->
+            <div class="kpi-row">
+                <div class="kpi-card">
+                    <div class="kpi-label">Total Entregas</div>
+                    <div class="kpi-value" id="kpi-entregas">0</div>
+                    <div class="kpi-trend positive">↑ 12.5%</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Faturação Total</div>
+                    <div class="kpi-value" id="kpi-faturacao">€0</div>
+                    <div class="kpi-trend positive">↑ 8.3%</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Margem de Lucro</div>
+                    <div class="kpi-value" id="kpi-margem">€0</div>
+                    <div class="kpi-trend positive">↑ 15.2%</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Taxa de Atrasos</div>
+                    <div class="kpi-value" id="kpi-atrasos">0%</div>
+                    <div class="kpi-trend negative">↓ 3.1%</div>
+                </div>
+            </div>
+
+            <!-- Gráfico de Colunas Empilhadas -->
+            <div class="chart-card full-width">
+                <h3>Faturação vs Custos por Mês</h3>
+                <canvas id="chart-financeiro"></canvas>
+            </div>
+
+            <!-- Matriz de Performance -->
+            <div class="table-card full-width">
+                <h3>Matriz de Performance por Região e Motorista</h3>
+                <div class="table-container">
+                    <table id="matriz-performance">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Página Produtos e Motoristas -->
+    <div id="produtos-motoristas" class="page">
+        <div class="dashboard-header">
+            <button class="back-button" data-page="landing-page">← Voltar</button>
+            <h2>Produtos e Motoristas</h2>
+            <div class="header-info">
+                <span class="filter-indicator">🏆 Top 5 Motoristas</span>
+            </div>
+        </div>
+        
+        <div class="dashboard-grid">
+            <!-- Gráfico de Barras - Top 5 Motoristas -->
+            <div class="chart-card">
+                <h3>Ranking Top 5 Motoristas</h3>
+                <canvas id="chart-ranking"></canvas>
+            </div>
+
+            <!-- Tabela de Detalhe da Frota -->
+            <div class="table-card">
+                <h3>Detalhe da Frota</h3>
+                <div class="table-container">
+                    <table id="tabela-frota">
+                        <thead>
+                            <tr>
+                                <th>ID Veículo</th>
+                                <th>Modelo</th>
+                                <th>Capacidade</th>
+                                <th>Total Entregas</th>
+                                <th>Performance</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Página Simulação -->
+    <div id="simulacao" class="page">
+        <div class="dashboard-header">
+            <button class="back-button" data-page="landing-page">← Voltar</button>
+            <h2>Simulação</h2>
+            <div class="header-info">
+                <span class="param-indicator">⚙️ Parâmetros Ativos</span>
+            </div>
+        </div>
+        
+        <div class="dashboard-grid">
+            <!-- Seletor de Parâmetro -->
+            <div class="control-card full-width">
+                <h3>Parâmetro de Campo</h3>
+                <div class="parameter-selector">
+                    <label for="metric-selector">Selecione a Métrica:</label>
+                    <select id="metric-selector" class="metric-dropdown">
+                        <option value="total_entregas">Total de Entregas</option>
+                        <option value="faturacao_total">Faturação Total</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Gráfico com Parâmetro -->
+            <div class="chart-card full-width">
+                <h3 id="chart-title-simulacao">Evolução Mensal - Total de Entregas</h3>
+                <canvas id="chart-simulacao"></canvas>
+            </div>
+
+            <!-- Resumo Mensal -->
+            <div class="table-card full-width">
+                <h3>Resumo Mensal Detalhado</h3>
+                <div class="table-container">
+                    <table id="tabela-simulacao">
+                        <thead>
+                            <tr>
+                                <th>Mês</th>
+                                <th>Total Entregas</th>
+                                <th>Faturação Total</th>
+                                <th>Custo Total</th>
+                                <th>Margem</th>
+                                <th>Variação MoM</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tooltip Personalizada -->
+    <div id="custom-tooltip" class="tooltip-hidden">
+        <div class="tooltip-card">
+            <h4>Total de Entregas</h4>
+            <div class="tooltip-value" id="tooltip-entregas">0</div>
+            <div class="tooltip-detail" id="tooltip-detail"></div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
